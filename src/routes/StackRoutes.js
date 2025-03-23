@@ -1,6 +1,6 @@
 import * as React from 'react';
 import {NavigationContainer} from '@react-navigation/native';
-import {AnaSayfa, AnaSayfa2, Login1} from '../Screens';
+import {AnaSayfa, AnaSayfa2, Login1, Login2} from '../Screens';
 import {RoutesName} from '../config';
 import buttomTabRoutess from './buttomTabRoutess';
 import {createNativeStackNavigator} from '@react-navigation/native-stack';
@@ -22,6 +22,11 @@ const StackRoutes = () => {
       <Stack.Screen
         name="login2"
         component={buttomTabRoutess}
+        options={{headerShown: false}}
+      />
+      <Stack.Screen
+        name="kayitOl"
+        component={Login2}
         options={{headerShown: false}}
       />
     </Stack.Navigator>

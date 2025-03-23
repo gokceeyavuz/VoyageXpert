@@ -12,11 +12,8 @@ import LinearGradient from 'react-native-linear-gradient';
 const index = ({navigation}) => {
   const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
-  const handleSignIn = () => {
-    // Giriş işlemleri burada yapılabilir
-    console.log('Email:', email);
-    console.log('Password:', password);
-  };
+  const [number, setNumber] = useState('');
+
   return (
     <LinearGradient
       style={style.gradient}
@@ -42,40 +39,56 @@ const index = ({navigation}) => {
       <View>
         <TextInput
           style={style.userName}
-          placeholder="Email"
-          placeholderTextColor="white"
-          value={email}
-          onChangeText={setEmail}></TextInput>
+          placeholder="İsim"
+          placeholderTextColor="white"></TextInput>
       </View>
       <View style={style.userAlani}></View>
       <View style={style.passwordAlani}>
         <View style={style.usernameText}>
           <TextInput
             style={style.password}
-            placeholder="Password"
-            placeholderTextColor="white"
-            secureTextEntry
-            value={password}
-            onChangeText={setPassword}></TextInput>
+            placeholder="Soyisim"
+            placeholderTextColor="white"></TextInput>
+        </View>
+        <View style={style.userAlani2}></View>
+        <View style={style.passwordAlani}>
+          <View style={style.usernameText}>
+            <TextInput
+              style={style.password}
+              placeholder="Telefon Numarası"
+              placeholderTextColor="white"
+              value={number}
+              onChangeText={setNumber}></TextInput>
+          </View>
+        </View>
+        <View style={style.userAlani2}></View>
+        <View style={style.passwordAlani}>
+          <View style={style.usernameText}>
+            <TextInput
+              style={style.password}
+              placeholder="Email"
+              placeholderTextColor="white"
+              value={email}
+              onChangeText={setEmail}></TextInput>
+          </View>
+        </View>
+        <View style={style.userAlani2}></View>
+        <View style={style.passwordAlani}>
+          <View style={style.usernameText}>
+            <TextInput
+              style={style.password}
+              placeholder="Şifre"
+              placeholderTextColor="white"
+              secureTextEntry
+              value={password}
+              onChangeText={setPassword}></TextInput>
+          </View>{' '}
         </View>
         <View style={style.userAlani2}></View>
         <TouchableOpacity
           style={style.loginAlani}
           onPress={() => navigation.navigate('login2')}>
-          <Text style={style.loginText}>Giriş Yap</Text>
-        </TouchableOpacity>
-        <View>
-          <Text style={style.forgetpassword}>Şifreni mi unuttun?</Text>
-        </View>
-      </View>
-      <View style={style.alan2}>
-        <View>
-          <Text style={style.createText}>Hesabın yok mu?</Text>
-        </View>
-        <TouchableOpacity
-          style={style.createAlani}
-          onPress={() => navigation.navigate('kayitOl')}>
-          <Text style={style.loginText}>Create</Text>
+          <Text style={style.loginText}>Kayıt Ol</Text>
         </TouchableOpacity>
       </View>
     </LinearGradient>
