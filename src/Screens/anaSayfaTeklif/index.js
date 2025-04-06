@@ -98,6 +98,21 @@ const index = () => {
             <Text style={style.alan3TeklifText2}>sahip ol</Text>
           </View>
         </View>
+        <View style={style.alan3}>
+          <ImageBackground
+            style={style.alan3Teklif3}
+            source={images.sondakika}
+            borderRadius={14}></ImageBackground>
+          <View>
+            <Text style={style.alan3TeklifText}>
+              Tatil Rezervasyonun son dakikaya mı kaldı?
+            </Text>
+            <Text style={style.alan3TeklifText2}>
+              Merak etme biz buradayız.Son dakika fırsatlarıyla en iyi tatil
+              rezervasyonunu sen yaptır.
+            </Text>
+          </View>
+        </View>
       </ScrollView>
     </View>
   );
