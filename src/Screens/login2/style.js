@@ -60,9 +60,10 @@ export default StyleSheet.create({
         padding: 14,
         borderRadius: 34,
         backgroundColor: 'white',
-        marginTop: 49,
+        marginTop: 29,
         alignSelf: 'center',
         width: windowWidth * 0.7,
+        marginBottom:34,
       },
       loginText: {
         color: '#9E80DA',
@@ -146,6 +147,14 @@ export default StyleSheet.create({
         color:'white',
         alignSelf:'center',
         marginTop:3
-      }
+      },
+      menuIcons: {
+        width: 27,
+        height: 27,
+        justifyContent: 'flex-start',
+        tintColor: 'white',
+        marginTop:24,
+        marginLeft: 8,
+      },
 
 });

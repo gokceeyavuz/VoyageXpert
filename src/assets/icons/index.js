@@ -13,6 +13,7 @@ const info = require('./info.png');
 const customer = require('./customer.png');
 const openbook = require('./openbook.png');
 const graduation = require('./graduation.png');
+const home2 = require('./home2.png');
 export default {
   bell,
   discount,
@@ -28,5 +29,6 @@ export default {
   info,
   customer,
   openbook,
-  graduation
+  graduation,
+  home2,
 };

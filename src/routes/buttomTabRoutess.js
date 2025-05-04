@@ -13,14 +13,14 @@ const buttomTabRoutess = () => {
         tabBarStyle: {height: 55}, // Tab bar yüksekliği
       }}>
       <Tab.Screen
-        name="Home"
+        name="AnaSayfa"
         component={AnaSayfa2}
         options={{
           headerShown: false,
           tabBarIcon: ({color, size}) => (
             <Image
-              style={{tintColor: color, height: 24, width: 24}}
-              source={Icons.home}
+              style={{tintColor: color, height: 27, width: 27}}
+              source={Icons.home2}
             />
           ),
         }}
