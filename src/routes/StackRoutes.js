@@ -1,6 +1,6 @@
 import * as React from 'react';
 import {NavigationContainer} from '@react-navigation/native';
-import {AnaSayfa, AnaSayfa2, Login1, Login2} from '../Screens';
+import {AnaSayfa, AnaSayfa2, BizeUlasin, Hakkimizda, Hamburger, KullanımKilavuzu, Login1, Login2, SSSS} from '../Screens';
 import {RoutesName} from '../config';
 import buttomTabRoutess from './buttomTabRoutess';
 import {createNativeStackNavigator} from '@react-navigation/native-stack';
@@ -29,7 +29,44 @@ const StackRoutes = () => {
         component={Login2}
         options={{headerShown: false}}
       />
+      <Stack.Screen
+        name="back"
+        component={buttomTabRoutess}
+        options={{headerShown: false}}
+      />
+      <Stack.Screen
+        name="go"
+        component={Hamburger}
+        options={{headerShown: false}}
+      />
+      <Stack.Screen
+        name="back2"
+        component={Hamburger}
+        options={{headerShown: false}}
+      />
+       <Stack.Screen
+        name="goHakkim"
+        component={Hakkimizda}
+        options={{headerShown: false}}
+      />
+       <Stack.Screen
+        name="goBizeUlasin"
+        component={BizeUlasin}
+        options={{headerShown: false}}
+      />
+        <Stack.Screen
+        name="goSSS"
+        component={SSSS}
+        options={{headerShown: false}}
+      />
+       <Stack.Screen
+        name="goKilavuz"
+        component={KullanımKilavuzu}
+        options={{headerShown: false}}
+      />
+
     </Stack.Navigator>
+    
   );
 };
 export default StackRoutes;

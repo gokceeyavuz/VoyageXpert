@@ -14,13 +14,15 @@ import icons from '../../assets/icons';
 import LinearGradient from 'react-native-linear-gradient';
 import images from '../../assets/images';
 
-const index = () => {
+const index = ({navigation}) => {
   const [text, setText] = useState('');
 
   return (
     <View style={style.backgrounnddd}>
       <View style={style.alan1}>
-        <Image style={style.menuIcons} source={icons.menu}></Image>
+        <TouchableOpacity onPress={() => navigation.navigate('go')}>
+          <Image style={style.menuIcons} source={icons.menu}></Image>
+        </TouchableOpacity>
         <View style={style.textBar}>
           <Text style={style.text1}>V</Text>
           <Text style={style.text2}>oyage</Text>
@@ -84,7 +86,7 @@ const index = () => {
             </View>
             <Text style={style.scrollText}>Konak,İzmir</Text>
           </View>
-          <View style={style.alan3ScrollTextAlani}> 
+          <View style={style.alan3ScrollTextAlani}>
             <View style={style.daire1}>
               <Image source={images.pisa} style={style.daire1icon}></Image>
             </View>
@@ -109,7 +111,10 @@ const index = () => {
                 source={images.aquapark}
                 style={style.imageBack}
                 borderRadius={22}>
-                <TouchableOpacity style={style.alan5Daire} width={12} height={14}>
+                <TouchableOpacity
+                  style={style.alan5Daire}
+                  width={12}
+                  height={14}>
                   <Image source={icons.like} style={style.hearticon}></Image>
                 </TouchableOpacity>
                 <View style={style.imageAciklama}>
@@ -123,9 +128,9 @@ const index = () => {
               source={images.termal}
               borderRadius={22}
               style={style.imageBack}>
-               <TouchableOpacity style={style.alan5Daire} width={12} height={14}>
-                  <Image source={icons.like} style={style.hearticon}></Image>
-                </TouchableOpacity>
+              <TouchableOpacity style={style.alan5Daire} width={12} height={14}>
+                <Image source={icons.like} style={style.hearticon}></Image>
+              </TouchableOpacity>
               <View style={style.imageAciklama}>
                 <Image source={icons.pin} style={style.circleicon}></Image>
                 <Text style={style.circleText}>Termal Otelleri</Text>
@@ -135,9 +140,9 @@ const index = () => {
               source={icons.balayı}
               style={style.imageBack}
               borderRadius={22}>
-               <TouchableOpacity style={style.alan5Daire} width={12} height={14}>
-                  <Image source={icons.like} style={style.hearticon}></Image>
-                </TouchableOpacity>
+              <TouchableOpacity style={style.alan5Daire} width={12} height={14}>
+                <Image source={icons.like} style={style.hearticon}></Image>
+              </TouchableOpacity>
               <View style={style.imageAciklama}>
                 <Image source={icons.pin} style={style.circleicon}></Image>
                 <Text style={style.circleText}>Balayı Otelleri</Text>
@@ -148,9 +153,9 @@ const index = () => {
               source={images.paris}
               style={style.imageBack}
               borderRadius={22}>
-               <TouchableOpacity style={style.alan5Daire} width={12} height={14}>
-                  <Image source={icons.like} style={style.hearticon}></Image>
-                </TouchableOpacity>
+              <TouchableOpacity style={style.alan5Daire} width={12} height={14}>
+                <Image source={icons.like} style={style.hearticon}></Image>
+              </TouchableOpacity>
               <View style={style.imageAciklama}>
                 <Image source={icons.pin} style={style.circleicon}></Image>
                 <Text style={style.circleText}>YurtDışı Otelleri</Text>

@@ -1,4 +1,5 @@
 import {
+  Alert,
   StyleSheet,
   Text,
   TextInput,
@@ -12,10 +13,29 @@ import LinearGradient from 'react-native-linear-gradient';
 const index = ({navigation}) => {
   const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
+  const isValidEmail = (email) => {
+    const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+    return emailRegex.test(email);
+  };
+
   const handleSignIn = () => {
-    // Giriş işlemleri burada yapılabilir
+    if (!email.trim()) {
+      Alert.alert('Hata', 'Email boş olamaz!');
+      return;
+    }
+    if (!isValidEmail(email)) {
+      Alert.alert('Hata', 'Geçerli bir email adresi giriniz!');
+      return;
+    }
+    if (!password.trim()) {
+      Alert.alert('Hata', 'Şifre boş olamaz!');
+      return;
+    }
+
+    // Eğer tüm kontroller geçtiyse giriş yap
     console.log('Email:', email);
     console.log('Password:', password);
+    navigation.navigate('login2');
   };
   return (
     <LinearGradient
@@ -61,7 +81,7 @@ const index = ({navigation}) => {
         <View style={style.userAlani2}></View>
         <TouchableOpacity
           style={style.loginAlani}
-          onPress={() => navigation.navigate('login2')}>
+          onPress={handleSignIn}>
           <Text style={style.loginText}>Giriş Yap</Text>
         </TouchableOpacity>
         <View>
