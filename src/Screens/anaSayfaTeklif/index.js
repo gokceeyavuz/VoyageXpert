@@ -98,11 +98,8 @@ const index = () => {
             <Text style={style.alan3TeklifText2}>sahip ol</Text>
           </View>
         </View>
-<<<<<<< HEAD
+
         <View style={style.alan3}>
-=======
-               <View style={style.alan3}>
->>>>>>> 3138586bc62481789bc4cc87288eaeac3b719cdd
           <ImageBackground
             style={style.alan3Teklif3}
             source={images.sondakika}
